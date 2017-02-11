@@ -62,7 +62,7 @@ paths.forEach(p=>{
             document.getElementsByTagName('head')[0].removeChild(x);
         }
         let script = document.createElement('script');
-        script.src = `https://em.wemakesites.net/country/${p.id}/?api_key=22633d89-46fa-469f-a34f-cda935684cac&callback=foo`
+        script.src = `http://em.wemakesites.net/country/${p.id}/?api_key=22633d89-46fa-469f-a34f-cda935684cac&callback=foo`
         script.id = "jsonp";
         document.getElementsByTagName('head')[0].appendChild(script);
 
@@ -89,7 +89,7 @@ function foo(d){
         p.appendChild(span);
         li.appendChild(p)
         ul.appendChild(li);
-    })
+    });
     document.body.appendChild(temp);
     loader.classList.add('hidden');
     map.classList.remove('opaque')
